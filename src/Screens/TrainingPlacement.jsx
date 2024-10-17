@@ -36,14 +36,14 @@ function TrainingPlacement() {
     navigate('/Contact');
   };
 
-  const [isVisible, setIsVisible] = useState(false);
+  
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
     if (scrollY > 80) {
-      setIsVisible(true);
+      
     } else {
-      setIsVisible(false);
+      
     }
   };
 

@@ -53,7 +53,7 @@ const Carousel = ({
     return () => {
       window.removeEventListener('resize', updateVisibleItems); 
     };
-  }, []);
+  }, [nextSlide]);
 
   return (
     <div
