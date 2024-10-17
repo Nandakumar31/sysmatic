@@ -153,7 +153,7 @@ function Home() {
           </p>
           <a
             href="/Contact"
-            className="inline-flex md:my-5 md:ml-5 items-center  px-5 py-3 text-sm font-medium text-center text-white bg-custom-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="inline-flex md:my-5 md:ml-5 items-center my-10 px-5 py-3 text-sm font-medium text-center text-white bg-custom-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Contact Us
           </a>
