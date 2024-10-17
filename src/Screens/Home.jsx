@@ -103,7 +103,7 @@ function Home() {
           <div className='slide-up'>
             <img src={Data} alt="Data Analytics" />
           </div>
-          <div className={`slide-up mt-60 ${isVisible ? 'slide-up' : ''}`}>
+          <div className={`slide-up md:mt-60 ${isVisible ? 'slide-up' : ''}`}>
             <img src={Mobile} alt="Data Analytics" />
           </div>
           <div className='md:mt-60 md:ml-20 mt-10 slide-up'>
