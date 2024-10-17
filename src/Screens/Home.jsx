@@ -73,12 +73,12 @@ function Home() {
         </div>
 
         <div className='flex flex-col md:flex-row justify-between'>
-          <div className="group w-full md:w-1/5 mb-10 px-4 bg-slate-200 py-8 rounded-lg relative overflow-hidden transition-transform transform hover:translate-x-2 hover:bg-blue-100 duration-300">
+          <div className="group w-full md:w-1/5 mb-40 px-4 bg-slate-200 py-8 rounded-lg relative overflow-hidden transition-transform transform hover:translate-x-2 hover:bg-blue-100 duration-300">
             <img src={DA} alt="Data Analytics" className="mx-auto" />
             <h3 className="text-xl font-bold text-blue-800 my-6">Data Analytics</h3>
           </div>
 
-          <div className="group w-full md:w-1/5 mt-20 mb-10 px-4   bg-slate-200 py-8 rounded-lg relative overflow-hidden transition-transform transform hover:translate-x-2 hover:bg-blue-100 duration-300">
+          <div className="group w-full md:w-1/5 mt-20 mb-10 px-4 py-20  bg-slate-200  rounded-lg relative overflow-hidden transition-transform transform hover:translate-x-2 hover:bg-blue-100 duration-300">
             <img src={DM} alt="Data Analytics" className="mx-auto" />
             <h3 className="text-xl font-bold text-blue-800 my-6">Digital Marketing</h3>
           </div>
@@ -89,7 +89,7 @@ function Home() {
             <img src={MDA} alt="Mobile App Development" className="mx-auto mix-blend-multiply" />
           </div>
 
-          <div className="group w-full md:w-1/5 mb-10 px-4 md:mx-4  bg-slate-200 py-8 rounded-lg relative overflow-hidden transition-transform transform hover:translate-x-2 hover:bg-blue-100 duration-300">
+          <div className="group w-full md:w-1/5  mb-40 px-4 md:mx-4  bg-slate-200 py-8 rounded-lg relative overflow-hidden transition-transform transform hover:translate-x-2 hover:bg-blue-100 duration-300">
             <h3 className="text-xl font-bold text-blue-800 my-6">Web Development</h3>
             <img src={WBD} alt="Web Development" className="mx-auto" />
           </div>
@@ -108,17 +108,21 @@ function Home() {
           items={items}
           visibleItems={2}
           renderItem={(item) => (
-            <div className="relative max-w-sm mx-auto bg-slate-200 border  border-gray-200 rounded-lg shadow overflow-hidden group">
+            <div className="relative max-w-sm w-full mx-auto bg-slate-200 border border-gray-200 rounded-lg shadow overflow-hidden group h-[500px]">
               <div className="absolute inset-0 bg-blue-500 transform translate-y-full group-hover:translate-y-1/2 transition-transform duration-500"></div>
-
-              <div className="relative z-10 p-5">
-                <img className="w-52 mx-auto my-10" src={item.imageUrl} alt={item.title} />
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                  {item.title}
-                </h5>
-                <p className="mb-3 font-normal text-gray-700">{item.description}</p>
+              <div className="relative z-10 p-5 h-full flex flex-col justify-between">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-slate-200"></div>
+                  <img className="w-52 mx-auto my-10  mix-blend-multiply" src={item.imageUrl} alt={item.title} />
+                </div>
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{item.title}</h5>
+                {/* <div>
+                  </div> */}
+                  <p className="mb-3 font-normal text-gray-700 p-10">{item.description}</p>
               </div>
             </div>
+
+
 
           )}
           renderArrow={(direction) => (direction === 'prev' ? '<' : '>')}

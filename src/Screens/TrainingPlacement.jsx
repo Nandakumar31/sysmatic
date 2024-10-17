@@ -1,23 +1,43 @@
 import React from 'react'
+import TrainPng from '../assets/BannerPng/Training.png'
+import one from '../assets/TrainingPng/one.png'
+import two from '../assets/TrainingPng/two.png'
+import three from '../assets/TrainingPng/three.png'
+import four from '../assets/TrainingPng/four.png'
 
 
 function TrainingPlacement() {
   const cardsData = [
     {
-      image: 'https://via.placeholder.com/300',
+      image: one,
       title: 'Native App Development',
       description: 'Create powerful, intuitive, and sleek mobile apps with our native app development services, ensuring optimal performance and great user engagement.'
     },
     {
-      image: 'https://via.placeholder.com/300',
+      image: two,
       title: 'Hybrid App Development',
       description: 'Create powerful, intuitive, and sleek mobile apps with our hybrid app development services, ensuring optimal performance and great user engagement.'
     },
 
   ];
+  const cardsData1 = [
+    {
+      image: three,
+      title: 'Software Testing & Automation',
+      description: 'Java and Selenium Automation Framework .'
+    },
+    {
+      image: two,
+      title: 'Software Testing & Automation',
+      description: 'Python and Selenium Automation Framework '
+    },
+
+  ];
   return (
     <div>
-      <div className="container mx-auto text-center h-80 border-4 bg-slate-200 p-10 mt-10 mb-10 rounded-lg"><h1>Image</h1></div>
+      <div className="container mx-auto text-center h-80  bg-slate-200 p-0 mt-10 mb-10 rounded-lg relative overflow-hidden">
+        <img className="absolute inset-0 w-full h-full object-cover" src={TrainPng} alt="Training" />
+      </div>
       <div className="container mx-auto text-center mb-20 mt-20">
         <h2 className="text-4xl font-bold text-blue-800 mb-6">We Provide Best Offers</h2>
         <p className="text-gray-700 text-lg mt-6">
@@ -25,18 +45,17 @@ function TrainingPlacement() {
           supported by our network of corporate partners
         </p>
         <div className="flex flex-wrap justify-center mt-20">
-          {cardsData.map((item,i) => {
+          {cardsData.map((item, i) => {
             return (
-              <div key={i} className="relative max-w-sm mx-40 mb-10 bg-slate-200 border 
-        border-gray-200 rounded-lg shadow overflow-hidden group">
-                {/* <div className="absolute inset-0 bg-blue-500 transform translate-y-full group-hover:translate-y-1/2 transition-transform duration-500"></div> */}
-
+              <div className="relative max-w-sm mx-40 mb-10 bg-slate-200 border border-gray-200 rounded-lg shadow overflow-hidden group">
                 <div className="relative z-10 p-5">
-                  <img className="w-52 mx-auto my-10" src={item.image} alt={item.title} />
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                    {item.title}
-                  </h5>
-                  <p className="mb-3 font-normal text-gray-700">{item.description}</p>
+                  <div className="relative w-52 mx-auto my-10 bg-slate-200"> {/* Set the desired background color here */}
+                    <img className="w-full h-full object-cover mix-blend-multiply" src={item.image} alt={item.title} />
+                  </div>
+                  <div>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{item.title}</h5>
+                    <p className="mb-3 font-normal text-gray-700">{item.description}</p>
+                  </div>
                 </div>
                 <div className="mb-10">
                   <button className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700">
@@ -44,21 +63,19 @@ function TrainingPlacement() {
                   </button>
                 </div>
               </div>
+
             );
           })}
         </div>
         <div className="flex flex-wrap justify-center mt-20">
-          {cardsData.map((item,i) => {
+          {cardsData1.map((item, i) => {
             return (
-              <div key={i} className="relative max-w-sm mx-40 mb-10 bg-slate-200 border 
-        border-gray-200 rounded-lg shadow overflow-hidden group">
-                {/* <div className="absolute inset-0 bg-blue-500 transform translate-y-full group-hover:translate-y-1/2 transition-transform duration-500"></div> */}
-
+              <div className="relative max-w-sm mx-40 mb-10 bg-slate-200 border border-gray-200 rounded-lg shadow overflow-hidden group">
                 <div className="relative z-10 p-5">
-                  <img className="w-52 mx-auto my-10" src={item.image} alt={item.title} />
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                    {item.title}
-                  </h5>
+                  <div className="relative w-52 mx-auto my-10 bg-slate-200"> {/* Set the desired background color here */}
+                    <img className="w-full h-full object-cover mix-blend-multiply" src={item.image} alt={item.title} />
+                  </div>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{item.title}</h5>
                   <p className="mb-3 font-normal text-gray-700">{item.description}</p>
                 </div>
                 <div className="mb-10">
@@ -67,6 +84,11 @@ function TrainingPlacement() {
                   </button>
                 </div>
               </div>
+
+
+
+
+
             );
           })}
         </div>

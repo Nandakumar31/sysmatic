@@ -1,57 +1,60 @@
 import React, { useState } from 'react'
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFirefoxBrowser } from 'react-icons/fa';
+import contactpng from '../assets/BannerPng/Contact.png'
 
 
 function Contact() {
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    project: '',
+    subject: '',
+    message: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required.';
+    if (!formData.email) newErrors.email = 'Email is required.';
+    if (!formData.phone) newErrors.phone = 'Phone is required.';
+    if (!formData.subject) newErrors.subject = 'Subject is required.';
+    if (!formData.message) newErrors.message = 'Message is required.';
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+    } else {
+      console.log('Form submitted:', formData);
+      setFormData({
         name: '',
         email: '',
         phone: '',
         project: '',
         subject: '',
         message: '',
-    });
+      });
+      setErrors({});
+    }
+  };
+  return (
+    <div>
+      <div className="container mx-auto text-center h-80  bg-slate-200 p-0 mt-10 mb-10 rounded-lg relative overflow-hidden">
+        <img className="absolute inset-0 w-full h-full object-cover" src={contactpng} alt="Contact" />
+      </div>
 
-    const [errors, setErrors] = useState({});
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const validateForm = () => {
-        const newErrors = {};
-        if (!formData.name) newErrors.name = 'Name is required.';
-        if (!formData.email) newErrors.email = 'Email is required.';
-        if (!formData.phone) newErrors.phone = 'Phone is required.';
-        if (!formData.subject) newErrors.subject = 'Subject is required.';
-        if (!formData.message) newErrors.message = 'Message is required.';
-        return newErrors;
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const formErrors = validateForm();
-        if (Object.keys(formErrors).length > 0) {
-            setErrors(formErrors);
-        } else {
-            console.log('Form submitted:', formData);
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                project: '',
-                subject: '',
-                message: '',
-            });
-            setErrors({});
-        }
-    };
-    return (
-        <div>
-            <div className="container mx-auto text-center h-80 border-4 bg-slate-200 p-10 mt-10 mb-10 rounded-lg"><h1>Image</h1></div>
-
-            
       <div className="bg-gray-100 py-5">
         <div className="container mx-auto py-5">
           <div className="flex flex-wrap -mx-2">
@@ -214,8 +217,8 @@ function Contact() {
           </div>
         </div>
       </div>
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Contact

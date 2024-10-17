@@ -1,10 +1,13 @@
 import React from 'react'
 import one from  '../assets/AboutPng/one.png'
 import two from  '../assets/AboutPng/two.png'
+import Aboutpng from '../assets/BannerPng/About.png'
 export default function About() {
     return (
         <div>
-            <div className="container mx-auto text-center h-80 border-4 bg-slate-200 p-10 mt-10 mb-10 rounded-lg"><h1>Image</h1></div>
+            <div className="container mx-auto text-center h-80  bg-slate-200 p-0 mt-10 mb-10 rounded-lg relative overflow-hidden">
+                <img className="absolute inset-0 w-full h-full object-cover" src={Aboutpng} alt="About" />
+            </div>
             <div className="mt-20 mb-40">
         {/* First Section */}
         <div className="container mx-auto px-4">
