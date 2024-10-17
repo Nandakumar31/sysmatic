@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaSnapchat } from 'react-icons/fa';
 import contactpng from '../assets/BannerPng/Contact.png'
 import chat from '../assets/Contactpng/chat.png'
@@ -63,7 +63,7 @@ function Contact() {
     }
   };
 
- 
+
 
 
 
@@ -138,7 +138,9 @@ function Contact() {
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
+                title="Map of Chennai, Tamil Nadu" 
               ></iframe>
+
             </div>
           </div>
 
@@ -210,7 +212,7 @@ function Contact() {
                     {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
                   </div>
 
-                  <button type="submit"  className="btn w-full py-4 px-10 mt-5 text-white bg-blue-600 font-bold rounded-md hover:bg-blue-700 transition duration-200">
+                  <button type="submit" className="btn w-full py-4 px-10 mt-5 text-white bg-blue-600 font-bold rounded-md hover:bg-blue-700 transition duration-200">
                     Send Message
                   </button>
                 </div>
