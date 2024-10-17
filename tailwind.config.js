@@ -4,12 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
     "./src/Screens/**/*.{js,jsx,ts,tsx}",
-    "./src/assets/**/*.{js,jsx,ts,tsx,png,jpg,jpeg,svg,gif}", 
+    "./src/assets/**/*.{js,jsx,ts,tsx,png,jpg,jpeg,svg,gif}",
   ],
   theme: {
     extend: {
       colors: {
         'primary': '#0B2464',
+        'custom-blue': '#1059b7',
+        'custom-word':'#406594',
+        'custom-footcolor':'#294E95',
       },
       keyframes: {
         fadeInUp: {

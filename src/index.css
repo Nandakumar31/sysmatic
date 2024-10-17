@@ -5,3 +5,34 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+
+@keyframes slideUp {
+  0% {
+      transform: translateY(100%);
+      /* opacity: 0; */
+  }
+  100% {
+      transform: translateY(0%);
+      /* opacity: 1; */
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s  ease-in;
+}
+
+@keyframes slideInLeft {
+  0% {
+      transform: translateX(100%); /* Start 20px to the right */
+      /* opacity: 0; */
+  }
+  100% {
+      transform: translateX(0%); /* End at original position */
+      /* opacity: 1; */
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards; /* Animation duration and easing */
+}

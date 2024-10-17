@@ -1,17 +1,29 @@
 
-
-/* it's by lion */
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+/*** Service Start ***/
+.service .service-item {
+  background: var(--bs-light);
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
-.animate-slide-down {
-  animation: slideDown 0.6s ease alternate;
+.service .service-item:hover {
+  box-shadow: 0 0 45px rgba(0, 0, 0, .2);
 }
+
+.service .service-item .service-img {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s;
+}
+
+.service .service-item .service-img img {
+  transition: 0.5s;
+}
+
+.service .service-item:hover .service-img img {
+  transform: scale(1.2);
+}
+/*** Service End ***/
+
