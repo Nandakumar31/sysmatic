@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaSnapchat } from 'react-icons/fa';
 import contactpng from '../assets/BannerPng/Contact.png'
 import chat from '../assets/Contactpng/chat.png'

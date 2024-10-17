@@ -4,7 +4,7 @@ import one from '../assets/TrainingPng/one.png';
 import two from '../assets/TrainingPng/two.png';
 import three from '../assets/TrainingPng/three.png';
 import four from '../assets/TrainingPng/four.png';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const cardsData = [
   {
