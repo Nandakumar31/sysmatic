@@ -11,6 +11,8 @@ import Carousel from '../components/Carousel'
 import { useNavigate } from 'react-router-dom'
 import '../App.css'
 
+import main from '../assets/main.png'
+
 
 
 const items = [
@@ -66,26 +68,32 @@ function Home() {
 
 
   return (
-    <div >
-      <div className="container mx-auto text-center border-4 bg-slate-200 p-10 mt-10 mb-10 rounded-lg">
-        <h2 className="text-lg text-custom-blue font-bold">Welcome to Sysmatic Solutions</h2>
-        <h1 className="text-4xl font-bold text-custom-blue mt-4">
-          Innovation At Work - Your Success, Our Mission
-        </h1>
-        <p className="text-custom-word text-lg mt-6">
-          Sysmatic Solutions is not just another IT service provider; we are innovators and problem-solvers committed to excellence.
-          Our comprehensive services are designed to provide solutions that are not only effective but also future-proof, ensuring
-          your business stays ahead of the curve.
-        </p>
-        <div className="mt-8">
-          <button onClick={handleservice}className="bg-blue-600 text-white px-6 py-3 rounded-md md:mr-4 my-5 hover:bg-blue-700" >
-            Explore Now
-          </button>
-          <button onClick={handleClick} className="bg-transparent border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-600 hover:text-white">
-            Contact Us
-          </button>
+    <div className='mt-32' >
+   
+      <div className="container mx-auto text-center   md:p-28 p-10 mt-10 mb-10 rounded-xl relative">
+        <img src={main} className='absolute inset-0 w-full h-full object-cover opacity-100 rounded-2xl' alt="Background" />
+        <div className="relative z-10 md:mt-20 mt-96">
+          <h2 className="text-lg text-custom-blue font-bold md:text-2xl">Welcome to Sysmatic Solutions</h2>
+          <h1 className="text-4xl font-bold text-custom-blue mt-4 md:text-5xl">
+            Innovation At Work - Your Success, Our Mission
+          </h1>
+          <p className="text-custom-word text-lg mt-6 md:text-xl">
+            Sysmatic Solutions is not just another IT service provider; we are innovators and problem-solvers committed to excellence.
+            Our comprehensive services are designed to provide solutions that are not only effective but also future-proof, ensuring
+            your business stays ahead of the curve.
+          </p>
+          <div className="mt-8 flex flex-col md:flex-row md:justify-center">
+            <button onClick={handleservice} className="bg-blue-600 text-white px-6 py-3 rounded-md md:mr-4 my-5 hover:bg-blue-700">
+              Explore Now
+            </button>
+            <button onClick={handleClick} className="bg-white text-primary border-primary border px-6 py-3 
+            rounded-md md:mr-4 my-5 hover:bg-blue-700 hover:text-white">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
+
       <div className="container mx-auto text-center mb-20 mt-20">
         <h2 className="text-4xl font-bold text-custom-blue mb-6">Our Services</h2>
         <div className="  mt-10 md:mt-0">
@@ -100,7 +108,7 @@ function Home() {
         </div>
 
         <div className={`flex flex-col md:flex-row justify-center slide-up ${isVisible ? 'slide-up' : ''}`}>
-          <div className='slide-up'>
+          <div className='slide-up mb-10'>
             <img src={Data} alt="Data Analytics" />
           </div>
           <div className={`slide-up md:mt-60 ${isVisible ? 'slide-up' : ''}`}>
@@ -147,8 +155,9 @@ function Home() {
           renderArrow={(direction) => (direction === 'prev' ? '<' : '>')}
         />
 
-        <div className="flex flex-col mx-auto md:flex-row w-1/2 items-center border mt-20 justify-center">
-          <p className="mb-0 w-full md:w-3/4 lg:w-2/4  text-center  mx-5 ">
+        <div className="flex flex-col mx-auto md:flex-row w-1/2 items-center border-dotted border-x-2 border-y-2
+            rounded-lg mt-20 mb-10 justify-center">
+          <p className="mb-0 w-full font-bold md:w-3/4 lg:w-2/4  text-center  mx-5 ">
             "Innovation at Work - Your Success, Our Mission."
           </p>
           <a

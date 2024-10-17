@@ -68,7 +68,7 @@ function Contact() {
 
 
   return (
-    <div>
+    <div className='mt-32' >
       <div className="container mx-auto text-center h-80  bg-slate-200 p-0 mt-10 mb-10 rounded-lg relative overflow-hidden">
         <img className="absolute inset-0 w-full h-full object-cover" src={contactpng} alt="Contact" />
       </div>

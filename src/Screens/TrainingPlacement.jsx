@@ -57,7 +57,7 @@ function TrainingPlacement() {
 
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-32">
       <div className="relative h-80 bg-slate-200 mt-10 mb-10 rounded-lg overflow-hidden">
         <img className="absolute inset-0 w-full h-full object-cover" src={TrainPng} alt="Training" />
       </div>
@@ -90,8 +90,10 @@ function TrainingPlacement() {
         <p className="text-custom-word text-lg mt-6 px-4 md:px-0">
           Our commitment to your success goes beyond basic training. We equip our students with skills based on real-world experiences, preparing them not just to enter the workforce but to excel in it.
         </p>
-        <div className="flex flex-col mx-auto md:flex-row w-1/2 items-center border mt-20 justify-center">
-          <p className="mb-0 w-full md:w-3/4 lg:w-2/4  text-center  mx-5 ">
+
+        <div className="flex flex-col mx-auto md:flex-row w-1/2 items-center border-dotted border-x-2 border-y-2
+            rounded-lg mt-20 mb-10 justify-center">
+          <p className="mb-0 font-bold w-full md:w-3/4 lg:w-2/4  text-center  mx-5 ">
             "Innovation at Work - Your Success, Our Mission."
           </p>
           <a
