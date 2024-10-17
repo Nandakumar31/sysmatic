@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Carousel = ({
   items = [],
@@ -8,52 +8,51 @@ const Carousel = ({
   renderArrow,
   itemKey = 'id',
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+
   const [isPaused, setIsPaused] = useState(false);
   const [visibleItems, setVisibleItems] = useState(initialVisibleItems);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  
 
-
-  const nextSlide = () => {
+  // Memoize nextSlide with useCallback
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
-
+  }, [items.length]); // Only re-create if items.length changes
 
   useEffect(() => {
     if (!isPaused && autoSlideInterval) {
       const interval = setInterval(nextSlide, autoSlideInterval);
       return () => clearInterval(interval);
     }
-  }, [currentIndex, isPaused, autoSlideInterval]);
+  }, [isPaused, autoSlideInterval, nextSlide]); // Include nextSlide as a dependency
 
-
-  const updateVisibleItems = () => {
+  // Memoize updateVisibleItems with useCallback
+  const updateVisibleItems = useCallback(() => {
     const width = window.innerWidth;
 
     if (width >= 1024) {
       setVisibleItems(4);
-
-    } else if (width >= 1024) {
+    } else if (width >= 1024) { // This condition is redundant, consider changing it
       setVisibleItems(3);
-
     } else if (width >= 768) {
       setVisibleItems(2);
-
     } else {
       setVisibleItems(1);
-
     }
-  };
+  }, []); // Dependencies not required since it only depends on window width
 
   useEffect(() => {
-    updateVisibleItems(); 
-    window.addEventListener('resize', updateVisibleItems); 
+    updateVisibleItems();
+    window.addEventListener('resize', updateVisibleItems);
 
     return () => {
-      window.removeEventListener('resize', updateVisibleItems); 
+      window.removeEventListener('resize', updateVisibleItems);
     };
-  }, [nextSlide]);
+  }, [updateVisibleItems]);
+  
+
+
+ 
 
   return (
     <div

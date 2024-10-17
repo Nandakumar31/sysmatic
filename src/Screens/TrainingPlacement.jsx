@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import TrainPng from '../assets/BannerPng/Training.png';
 import one from '../assets/TrainingPng/one.png';
 import two from '../assets/TrainingPng/two.png';
