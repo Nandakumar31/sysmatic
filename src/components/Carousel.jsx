@@ -11,7 +11,7 @@ const Carousel = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [visibleItems, setVisibleItems] = useState(initialVisibleItems);
-  const [dummybtn,setDummybtn]=useState(false)
+
   
 
 
@@ -53,7 +53,7 @@ const Carousel = ({
     return () => {
       window.removeEventListener('resize', updateVisibleItems); 
     };
-  }, [dummybtn]);
+  }, []);
 
   return (
     <div
