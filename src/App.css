@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*** Service Start ***/
 .service .service-item {
@@ -27,3 +28,34 @@
 }
 /*** Service End ***/
 
+=======
+
+/*** Service Start ***/
+.service .service-item {
+  background: var(--bs-light);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.service .service-item:hover {
+  box-shadow: 0 0 45px rgba(0, 0, 0, .2);
+}
+
+.service .service-item .service-img {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: 0.5s;
+}
+
+.service .service-item .service-img img {
+  transition: 0.5s;
+}
+
+.service .service-item:hover .service-img img {
+  transform: scale(1.2);
+}
+/*** Service End ***/
+
+>>>>>>> bc10b2e43c35a9f46b7b6372e526e75bfbf8d47c
